@@ -54,9 +54,6 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 --role="roles/opsconfigmonitoring.resourceMetadata.writer"
 
 
-sleep 30
-
-
 VM_PREFIX=abm
 VM_WS=$VM_PREFIX-ws
 VM_CP1=$VM_PREFIX-cp1
@@ -106,9 +103,6 @@ do
          --format='get(networkInterfaces[0].networkIP)')
     IPs+=("$IP")
 done
-
-
-sleep 30
 
 
 # Wait for SSH to be ready on all VMs
